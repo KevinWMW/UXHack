@@ -1,0 +1,40 @@
+---
+---
+
+<div class="flex justify-center gap-4 my-8">
+    <div class="countdown font-mono text-4xl">
+        <span style="--value:0;"></span>d
+    </div>
+    <div class="countdown font-mono text-4xl">
+        <span style="--value:0;"></span>h
+    </div>
+    <div class="countdown font-mono text-4xl">
+        <span style="--value:0;"></span>m
+    </div>
+    <div class="countdown font-mono text-4xl">
+        <span style="--value:0;"></span>s
+    </div>
+</div>
+
+<script>
+    function updateCountdown() {
+        const targetDate = new Date('2025-02-28T09:00:00').getTime();
+        
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.querySelectorAll<HTMLElement>('.countdown span').forEach((el, index) => {
+                const values = [days, hours, minutes, seconds];
+                el.style.setProperty('--value', String(values[index]));
+            });
+        }, 1000);
+    }
+    
+    updateCountdown();
+</script>
