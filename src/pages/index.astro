@@ -14,84 +14,92 @@ import Countdown from '../components/Countdown.astro';
 
 <Layout>
 	<Header/>
-	<div class="flex flex-col items-center bg-base-200 mt-16">
+	<div class="bg">
+		<!-- Welcome Section -->
+		<div id="home" class="flex flex-col items-center py-10 md:py-20 pt-24 md:pt-40 px-4">
+			<div class="bg-base-100 bg-opacity-90 rounded-lg shadow-lg p-6 md:p-12 w-full md:max-w-2xl">
+				<h1 class="text-2xl md:text-4xl font-bold text-center mb-3 md:mb-5">
+					Welcome to TechVision UXHackathon!
+				</h1>
 
-		<h1 class="text-4xl font-bold text-center mt-10 mb-5">
-			Welcome to TechVision UXHackathon!
-		</h1>
+				<h2 class="text-lg md:text-2xl text-center px-2 md:px-4 mb-3 md:mb-5">
+					Join us for an exciting journey into the world of user experience design.
+				</h2>
 
-		<h2 class="text-2xl text-center px-4">
-			Join us for an exciting journey into the world of user experience design.
-		</h2>
+				<h2 class="text-lg md:text-2xl font-bold text-center mb-6 md:mb-8 px-2 md:px-4">
+					28th February - 1st March
+				</h2>
 
-		<h2 class="text-2xl font-bold text-center mb-5 pt-4 px-4">
-			28th February - 1st March
-		</h2>
+				<Countdown/>
 
-		<Countdown/>
+				<button class="btn btn-lg md:btn-xl btn-primary mt-6 md:mt-8 w-full">Sign Up!</button>
+			</div>
+		</div>
 
-		<button class="btn btn-xl btn-primary">Sign Up!</button>
-		
-		<h1 class="text-4xl font-bold text-center mt-10 mb-5">
-			Sponsors
-		</h1>
+		<!-- Sponsors Section -->
+		<div id="sponsors" class="flex flex-col items-center py-10 md:py-20 border-t-4 px-4">
+			<h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10">
+				Sponsors
+			</h1>
+		</div>
 
-		<h1 class="text-4xl font-bold text-center mt-10 mb-5">
-			Agenda
-		</h1>
-		<div class="space-y-4 w-full max-w-2xl px-4 mb-16">
-			<div class="card bg-base-100 shadow-sm rounded-md">
-				<div class="card-body">
-					<h2 class="card-title font-extrabold justify-center">Saturday</h2>
-					<div class="space-y-2 text-lg text-center">
-						<p>09:00 - Registration</p>
-						<p>11:00 - Opening Ceremony</p>
-						<p>12:00 - Hackathon commences</p>
-						<p>14:00 - Lunch time</p>
-						<p>17:00 - Mini project</p>
-						<p>19:00 - Dinner time</p>
-						<p>20:00 - Mini game</p>
-						<p>22:00 - Building Closes</p>
+		<!-- Agenda Section -->
+		<div id="agenda" class="flex flex-col items-center py-10 md:py-20 border-t-4 px-4">
+			<h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10">
+				Agenda
+			</h1>
+			<div class="space-y-3 md:space-y-4 w-full max-w-2xl px-0 md:px-4 mb-10 md:mb-16">
+				<div class="card bg-base-100 shadow-sm rounded-md text-sm md:text-base">
+					<div class="card-body p-4 md:p-6">
+						<h2 class="card-title font-extrabold justify-center text-lg md:text-xl">Saturday</h2>
+						<div class="space-y-1 md:space-y-2 text-center">
+							<p>09:00 - Registration</p>
+							<p>11:00 - Opening Ceremony</p>
+							<p>12:00 - Hackathon commences</p>
+							<p>14:00 - Lunch time</p>
+							<p>17:00 - Mini project</p>
+							<p>19:00 - Dinner time</p>
+							<p>20:00 - Mini game</p>
+							<p>22:00 - Building Closes</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="card bg-base-100 shadow-sm rounded-md">
-				<div class="card-body">
-					<h2 class="card-title font-extrabold justify-center">Sunday</h2>
-					<div class="space-y-2 text-lg text-center">
-						<p>07:00 - Reopens</p>
-						<p>10:00 - Breakfast time</p>
-						<p>12:00 - Hackathon ends and participants present their solutions</p>
-						<p>13:00 - Judging and award ceremony</p>
-						<p>16:00 - Event ends</p>
+				<div class="card bg-base-100 shadow-sm rounded-md text-sm md:text-base">
+					<div class="card-body p-4 md:p-6">
+						<h2 class="card-title font-extrabold justify-center text-lg md:text-xl">Sunday</h2>
+						<div class="space-y-1 md:space-y-2 text-center">
+							<p>07:00 - Reopens</p>
+							<p>10:00 - Breakfast time</p>
+							<p>12:00 - Hackathon ends and participants present their solutions</p>
+							<p>13:00 - Judging and award ceremony</p>
+							<p>16:00 - Event ends</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-			
-				
+		<!-- Where Are We Section -->
+		<div id="location" class="flex flex-col items-center py-10 md:py-20 border-t-4 px-4">
+			<a 
+				href="https://maps.app.goo.gl/WNG8EFTth2mbQksA9" 
+				target="_blank" 
+				rel="noopener noreferrer"
+				class="btn btn-lg md:btn-xl btn-primary">
+				Where are we?
+			</a>
+		</div>
 
+		<!-- FAQs Section -->
+		<div id="faqs" class="flex flex-col items-center py-10 md:py-20 border-t-4 px-4">
+			<h1 class="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10">
+				Frequently Asked Questions
+			</h1>
+			<FAQs/>
+		</div>
 
-
+		<FAB/>
+		<Footer/>
 	</div>
-
-	<div class="flex flex-col items-center content-center">
-        <a 
-			href="https://maps.app.goo.gl/WNG8EFTth2mbQksA9" 
-			target="_blank" 
-			rel="noopener noreferrer"
-			class="btn btn-xl btn-primary m-10">
-            Where are we?
-        </a>
-    </div>
-
-	<h1 class="text-4xl font-bold text-center mt-10 mb-5">
-		Frequently Asked Questions
-	</h1>
-	<FAQs/>
-
-	<FAB/>
-	<Footer/>
 
 </Layout>

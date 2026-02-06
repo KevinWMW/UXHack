@@ -3,14 +3,40 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 ---
 
-<header class="fixed top-0 z-10 w-full opacity-80">
-    <div class="navbar bg-base-100 px-8">
-        <a 
-			href="https://linktr.ee/techvisionsociety" 
-			target="_blank" 
-			rel="noopener noreferrer"
-        >
-            <Image src={logo} alt="TechVision Logo" width={200} height={200} />
-        </a>
+<header class="fixed top-0 z-10 w-full">
+    <div class="navbar bg-base-100 px-4 md:px-8">
+        <div class="navbar-start">
+            <a 
+                href="https://linktr.ee/techvisionsociety" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                <Image src={logo} alt="TechVision Logo" width={120} height={120} class="w-20 md:w-32" />
+            </a>
+        </div>
+        <div class="navbar-end gap-2 md:gap-4">
+            <!-- Desktop Navigation -->
+            <a href="#home" class="nav-links hidden md:inline-block">Home</a>
+            <a href="#sponsors" class="nav-links hidden md:inline-block">Sponsors</a>
+            <a href="#agenda" class="nav-links hidden md:inline-block">Agenda</a>
+            <a href="#location" class="nav-links hidden md:inline-block">Location</a>
+            <a href="#faqs" class="nav-links hidden md:inline-block">FAQs</a>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="dropdown dropdown-end md:hidden">
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </header>

@@ -10,6 +10,26 @@
     --color-light: #ffffff;
 }
 
+.bg {
+    background: url('/banner.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.nav-links {
+    @apply btn btn-ghost normal-case text-base md:text-base;
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none !important;
+    }
+}
+
 /* #background {
     position: fixed;
     top: 0;
