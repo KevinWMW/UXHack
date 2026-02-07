@@ -1,19 +1,28 @@
----
----
-
-<div class="flex justify-center gap-4 my-8">
-    <div class="countdown font-mono text-4xl">
-        <span style="--value:0;"></span>d
-    </div>
-    <div class="countdown font-mono text-4xl">
-        <span style="--value:0;"></span>h
-    </div>
-    <div class="countdown font-mono text-4xl">
-        <span style="--value:0;"></span>m
-    </div>
-    <div class="countdown font-mono text-4xl">
-        <span style="--value:0;"></span>s
-    </div>
+<div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+  <div class="flex flex-col">
+    <span class="countdown font-mono text-5xl">
+      <span id="days" style="--value:0;" aria-live="polite" aria-label="days"></span>
+    </span>
+    days
+  </div>
+  <div class="flex flex-col">
+    <span class="countdown font-mono text-5xl">
+      <span id="hours" style="--value:0;" aria-live="polite" aria-label="hours"></span>
+    </span>
+    hours
+  </div>
+  <div class="flex flex-col">
+    <span class="countdown font-mono text-5xl">
+      <span id="minutes" style="--value:0;" aria-live="polite" aria-label="minutes"></span>
+    </span>
+    min
+  </div>
+  <div class="flex flex-col">
+    <span class="countdown font-mono text-5xl">
+      <span id="seconds" style="--value:0;" aria-live="polite" aria-label="seconds"></span>
+    </span>
+    sec
+  </div>
 </div>
 
 <script>
@@ -29,10 +38,17 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-            document.querySelectorAll<HTMLElement>('.countdown span').forEach((el, index) => {
-                const values = [days, hours, minutes, seconds];
-                el.style.setProperty('--value', String(values[index]));
-            });
+            document.getElementById('days').textContent = String(days);
+            document.getElementById('days').style.setProperty('--value', String(days));
+            
+            document.getElementById('hours').textContent = String(hours);
+            document.getElementById('hours').style.setProperty('--value', String(hours));
+            
+            document.getElementById('minutes').textContent = String(minutes);
+            document.getElementById('minutes').style.setProperty('--value', String(minutes));
+            
+            document.getElementById('seconds').textContent = String(seconds);
+            document.getElementById('seconds').style.setProperty('--value', String(seconds));
         }, 1000);
     }
     
