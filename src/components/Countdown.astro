@@ -26,31 +26,40 @@
 </div>
 
 <script>
+    const targetDate = new Date('2026-02-28T09:00:00').getTime();
+    
     function updateCountdown() {
-        const targetDate = new Date('2026-02-28T09:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = targetDate - now;
         
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        
+        if (daysEl && hoursEl && minutesEl && secondsEl) {
+            daysEl.textContent = String(days);
+            daysEl.style.setProperty('--value', String(days));
             
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            hoursEl.textContent = String(hours);
+            hoursEl.style.setProperty('--value', String(hours));
             
-            document.getElementById('days').textContent = String(days);
-            document.getElementById('days').style.setProperty('--value', String(days));
+            minutesEl.textContent = String(minutes);
+            minutesEl.style.setProperty('--value', String(minutes));
             
-            document.getElementById('hours').textContent = String(hours);
-            document.getElementById('hours').style.setProperty('--value', String(hours));
-            
-            document.getElementById('minutes').textContent = String(minutes);
-            document.getElementById('minutes').style.setProperty('--value', String(minutes));
-            
-            document.getElementById('seconds').textContent = String(seconds);
-            document.getElementById('seconds').style.setProperty('--value', String(seconds));
-        }, 1000);
+            secondsEl.textContent = String(seconds);
+            secondsEl.style.setProperty('--value', String(seconds));
+        }
     }
     
+    // Call immediately on page load
     updateCountdown();
+    
+    // Then update every second
+    setInterval(updateCountdown, 1000);
 </script>
