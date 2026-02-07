@@ -52,6 +52,30 @@ html {
   background-size: cover;
 }
 
+/* Glassmorphism CSS */
+.glass-element {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Optional: Add these for better browser support */
+.glass-element {
+  /* Fallback for older browsers */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* For better performance on mobile */
+@supports (backdrop-filter: blur(1px)) {
+  .glass-element {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+  }
+}
+
 
 /* #background {
     position: fixed;
