@@ -29,8 +29,21 @@ import SponsorCard from '../components/SponsorCard.astro';
 				</h2>
 
 				<Countdown/>
+				
+				<tito-button 
+					class="btn btn-lg md:btn-xl btn-primary mt-3 md:mt-5 w-full" 
+					event="techvision-soc/uxhack-26">Sign Up!
+				</tito-button>
 
-				<button class="btn btn-lg md:btn-xl btn-primary mt-6 md:mt-8 w-full">Sign Up!</button>
+				<div id="location">
+					<a 
+						href="https://maps.app.goo.gl/WNG8EFTth2mbQksA9" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="btn btn-lg md:btn-xl btn-secondary mt-3 md:mt-5 w-full">
+						Where are we?
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -131,26 +144,26 @@ import SponsorCard from '../components/SponsorCard.astro';
 								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">07:00</p>
 								<h3 class="text-base md:text-lg font-semibold">Building Reopens</h3>
 							</div>
-							<div class="py-4">
-								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">10:00 - 11:00</p>
-								<h3 class="text-base md:text-lg font-semibold">Breakfast & Final Push</h3>
-							</div>
-							<div class="py-4">
-								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">12:00 - 13:00</p>
-								<h3 class="text-base md:text-lg font-semibold">Hackathon Ends & Presentations</h3>
-							</div>
-							<div class="py-4">
-								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">13:00 - 15:00</p>
-								<h3 class="text-base md:text-lg font-semibold">Judging & Award Ceremony</h3>
-							</div>
-							<div class="py-4">
-								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">15:00 - 16:00</p>
-								<h3 class="text-base md:text-lg font-semibold">Closing Remarks & Networking</h3>
-							</div>
-							<div class="py-4">
-								<p class="text-base md:text-lg font-normal text-gray-600 mb-1">16:00</p>
-								<h3 class="text-base md:text-lg font-semibold">Event Ends</h3>
-							</div>
+								<div class="py-4">
+									<p class="text-base md:text-lg font-normal text-gray-600 mb-1">10:00 - 11:00</p>
+									<h3 class="text-base md:text-lg font-semibold">Breakfast & Final Push</h3>
+								</div>
+								<div class="py-4">
+									<p class="text-base md:text-lg font-normal text-gray-600 mb-1">12:00 - 13:00</p>
+									<h3 class="text-base md:text-lg font-semibold">Hackathon Ends & Presentations</h3>
+								</div>
+								<div class="py-4">
+									<p class="text-base md:text-lg font-normal text-gray-600 mb-1">13:00 - 15:00</p>
+									<h3 class="text-base md:text-lg font-semibold">Judging & Award Ceremony</h3>
+								</div>
+								<div class="py-4">
+									<p class="text-base md:text-lg font-normal text-gray-600 mb-1">15:00 - 16:00</p>
+									<h3 class="text-base md:text-lg font-semibold">Closing Remarks & Networking</h3>
+								</div>
+								<div class="py-4">
+									<p class="text-base md:text-lg font-normal text-gray-600 mb-1">16:00</p>
+									<h3 class="text-base md:text-lg font-semibold">Event Ends</h3>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -159,15 +172,7 @@ import SponsorCard from '../components/SponsorCard.astro';
 		</div>
 
 		<!-- Where Are We Section -->
-		<div id="location" class="flex flex-col items-center py-10 md:py-20   px-4">
-			<a 
-				href="https://maps.app.goo.gl/WNG8EFTth2mbQksA9" 
-				target="_blank" 
-				rel="noopener noreferrer"
-				class="btn btn-lg md:btn-xl btn-primary">
-				Where are we?
-			</a>
-		</div>
+
 
 		<!-- FAQs Section -->
 		<div id="faqs" class="flex flex-col items-center py-10 md:py-20   px-4">
