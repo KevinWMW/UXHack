@@ -6,7 +6,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>TechVision UXHackathon</title>
-		<script src='https://js.tito.io/v2' async></script>
+		<script>
+			// This code runs only on the client
+			import 'https://js.tito.io/v2';
+
+			// Pre-initialize the widget so the first click works
+			document.addEventListener('astro:page-load', () => {
+				if (window.tito) {
+				window.tito.prefill(); 
+				}
+			});
+</script>
 	</head>
 	<body>
 		<div class="wrapper">
