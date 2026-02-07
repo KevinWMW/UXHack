@@ -29,12 +29,23 @@ import logo from '../assets/logo.png';
                     </svg>
                 </button>
                 <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sponsors">Sponsors</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#home" onclick="document.querySelector('.dropdown').open = false">Home</a></li>
+                    <li><a href="#sponsors" onclick="document.querySelector('.dropdown').open = false">Sponsors</a></li>
+                    <li><a href="#agenda" onclick="document.querySelector('.dropdown').open = false">Agenda</a></li>
+                    <li><a href="#faqs" onclick="document.querySelector('.dropdown').open = false">FAQs</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </header>
+
+<script>
+  document.querySelectorAll('.dropdown-content a').forEach(link => {
+    link.addEventListener('click', () => {
+      const dropdown = document.querySelector('.dropdown-end');
+      if (dropdown) {
+        dropdown.removeAttribute('open');
+      }
+    });
+  });
+</script>

@@ -6,7 +6,7 @@ import Footer from "../components/footer.astro";
 import FAQs from '../components/FAQs.astro';
 import Countdown from '../components/Countdown.astro';
 import SponsorCard from '../components/SponsorCard.astro';
-
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <Layout>
@@ -30,7 +30,7 @@ import SponsorCard from '../components/SponsorCard.astro';
 				<Countdown/>
 				
 				<tito-button 
-					class="btn btn-lg md:btn-xl btn-primary mt-3 md:mt-5 w-full" 
+					class="btn btn-lg md:btn-xl btn-primary md:mt-5 w-full" 
 					event="techvision-soc/uxhack-26">Sign Up!
 				</tito-button>
 
