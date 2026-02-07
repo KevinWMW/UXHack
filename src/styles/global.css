@@ -10,14 +10,14 @@
     --color-light: #ffffff;
 }
 
-.bg {
+/* .bg {
     background: url('/banner.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     width: 100%;
     min-height: 100%;
     z-index: 1;
-}
+} */
 
 .nav-links {
     @apply btn btn-ghost normal-case text-base md:text-base;
@@ -29,6 +29,21 @@
         display: none !important;
     }
 }
+
+.parallax {
+  /* The image used */
+  background-image: url('/banner.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 /* #background {
     position: fixed;
