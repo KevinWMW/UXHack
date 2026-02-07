@@ -10,6 +10,10 @@
     --color-light: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* .bg {
     background: url('/banner.png') no-repeat center center fixed;
     background-size: cover;
@@ -18,6 +22,10 @@
     min-height: 100%;
     z-index: 1;
 } */
+
+#home {
+    justify-content: center;
+}
 
 .nav-links {
     @apply btn btn-ghost normal-case text-base md:text-base;
