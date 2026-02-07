@@ -60,6 +60,7 @@ html {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  padding: 16px;
 }
 
 /* Optional: Add these for better browser support */
